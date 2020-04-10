@@ -1,0 +1,6 @@
+-- CREATE TABLE  products (
+--    id SERIAL PRIMARY KEY,
+--    name VARCHAR(200),
+--    price MONEY,
+--    imgurl VARCHAR(2000)
+-- )
