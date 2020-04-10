@@ -14,37 +14,45 @@ class Form extends Component {
       // Bind statements
    }
 
-   // handleChangeImgurl = () => {
-   //    this.setState({
-   //       imgurl: event.target.value
-   //    })
-   // }
+   handleChangeImgurl = (value) => {
+      console.log(value)
+      this.setState({
+         imgurl: value
+      })
+   }
 
-   // handleChangeProduct = () => {
-   //    this.setState({
-   //       name: event.target.value
-   //    })
-   // }
+   handleChangeProduct = (value) => {
+      console.log(value)
+      this.setState({
+         name: value
+      })
+   }
 
-   // handleChangePrice = () => {
-   //    this.setState({
-   //       price: event.target.value
-   //    })
-   // }
+   handleChangePrice = (value) => {
+      console.log(value)
+      this.setState({
+         price: value
+      })
+   }
 
 
 
-   // handleChangeCancel = () => {
-   //    this.setState({
+   handleChangeCancel = () => {
+      this.setState({
+         imgurl: "",
+         name: "",
+         price: 0
          
-   //    })
-   // }
+      })
+   }
 
-   // handleChangeAdd = () => {
-   //    this.setState({
-
-   //    })
-   // }
+   handleChangeAdd = () => {
+      this.setState({
+         imgurl: "",
+         name: "",
+         price: 0
+      })
+   }
 
    render() {
 
@@ -52,9 +60,9 @@ class Form extends Component {
       return (
          <div>
             <img src="https://image.shutterstock.com/image-vector/default-ui-image-placeholder-wireframes-260nw-1037719192.jpg" alt="product image" />
-            <input placeholder="Insert Image url" />
-            <input placeholder="Insert Product Name" />
-            <input placeholder="Insert Price" />
+            <input onChange={input => this.handleChangeImgurl (input.target.value) } type="url" placeholder="Insert Image url" />
+            <input onChange={input => this.handleChangeProduct (input.target.value) } type="text" placeholder="Insert Product Name" />
+            <input onChange={input => this.handleChangePrice (input.target.value) } type="number" placeholder="Insert Price" />
             <button onClick={this.handleChangeCancel}>Cancel</button>
             <button onClick={this.handleChangeAdd}>Add to Inventory</button>
          </div>

@@ -1,9 +1,9 @@
-CREATE TABLE  products (
-  id SERIAL PRIMARY KEY,
-  name VARCHAR(200),
-  price NUMERIC,
-  imgurl VARCHAR(2000)
-)
+-- CREATE TABLE  products (
+--   id SERIAL PRIMARY KEY,
+--   name VARCHAR(200),
+--   price NUMERIC,
+--   imgurl VARCHAR(2000)
+-- )
 
 -- INSERT INTO products
 -- (name, price, imgurl)
