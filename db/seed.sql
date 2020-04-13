@@ -1,7 +1,7 @@
 -- CREATE TABLE  products (
 --   id SERIAL PRIMARY KEY,
 --   name VARCHAR(200),
---   price NUMERIC,
+--   price DECIMAL,
 --   imgurl VARCHAR(2000)
 -- )
 
@@ -12,3 +12,4 @@
 -- ('Pants', 56.45, 'https://cdn.shopify.com/s/files/1/0454/6253/products/Carson_Denim_0001_D114R-CARSON-29627.jpg?v=1585687022'),
 -- ('Jacket', 239.00, 'https://assets.overland.com/is/image/overlandsheepskin/23701-brc2-av903549?$style%2Dlg%2D2x$'),
 -- ('hat', 110.75, 'https://cdn.shopify.com/s/files/1/2666/6234/products/designer-hats-unisex-women-and-men-baseball_grande_73ca74d7-fb7e-41d1-a791-ef977d56f40d_1024x1024.jpg?v=1572412687')
+

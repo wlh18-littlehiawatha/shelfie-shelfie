@@ -1,6 +1,7 @@
 // imports
 require('dotenv').config();
 
+
 const express = require("express")
 const massive = require("massive")
 
@@ -39,3 +40,4 @@ massive({
 
 
 // EndPoints
+app.post('/api/product', cc.createProduct)

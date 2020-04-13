@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 import Header from './components/header/Header';
 import Dashboard from './components/dashboard/Dashboard';
 import Form from './components/form/Form';
-// import './App.css';
+// import './reset.css';
+import './App.css';
 
 class App extends Component {
   constructor(props) {
