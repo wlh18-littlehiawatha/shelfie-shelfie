@@ -41,3 +41,6 @@ massive({
 
 // EndPoints
 app.post('/api/product', cc.createProduct)
+app.get('/api/product', cc.getProduct)
+// app.put('/api/product/:id', cc.updateProduct )
+// app.delete('/api/product/:id', cc.deleteProduct )

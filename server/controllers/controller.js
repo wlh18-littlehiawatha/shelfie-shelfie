@@ -4,15 +4,40 @@ module.exports = {
    createProduct: (req, res) => {
       const db = req.app.get('db')
       const { name, price, imgurl } = req.body
+      // console.log(req.body)
       db.create_product([name, price, imgurl])
          .then(() => res.sendStatus(200))
-         // .catch(error => console.log(error, 'error with create product controller'))
-         .then(() => res.sendStatus(200))
+         // .catch(error => console.log(error, 'error with create product controller'))        
          .catch(err => {
             res.status(500).send({ errorMessage: "Website currently under maintenance" });
             console.log(err);
          });
+   },
+
+
+   
+   getProduct: (req, res) => {
+      const db = req.app.get('db')
+      db.get_product([])
+      .then((resProducts) => res.status(200).send(resProducts))
+      .catch((err) => console.log(err, `error with getProduct method in controller.js`))
    }
+
+   
+   
+   // updateProduct:
+
+
+
+
+   // deleteProduct:
+
+
+
+
+
+
+
 }
 
 
