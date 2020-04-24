@@ -21,19 +21,43 @@ module.exports = {
       db.get_product([])
       .then((resProducts) => res.status(200).send(resProducts))
       .catch((err) => console.log(err, `error with getProduct method in controller.js`))
-   }
+   },
 
    
    
    // updateProduct:
 
 
+   updateProduct: (req, res) => {
+      const {imgurl, name, price} = req.body
+      const {product_id} = req.params
+
+      const db = req.app.get('db')
+      db.update_product([product_id, name, price, imgurl])
+      .then((resProducts) => res.status(200).send(resProducts))
+      .catch((err) => {
+      res.status(500).send({errorMessage: "Website currently under maintenance" });
+      console.log(err, `error with updateProduct method in controller.js`)}
+      
+      )   
+   },
+
 
 
    // deleteProduct:
 
 
+   deleteProduct: (req, res) => {
+      const db = req.app.get('db')
+      const {product_id} = req.params
 
+      db.delete_product(product_id)
+      .then(() => res.sendStatus(200))
+      .catch((err) => {
+         res.status(500).send({errorMessage: "Website currently under maintenance" });
+         console.log(err, `error with updateProduct method in controller.js`)}         
+         )   
+   }
 
 
 

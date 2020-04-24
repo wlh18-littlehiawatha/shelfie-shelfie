@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import './Form.css';
 
 
 class Form extends Component {
@@ -58,6 +59,23 @@ class Form extends Component {
          })
       })
    }
+
+
+   // updateProduct = () => {
+   //    const {imgurl, name, price} = this.state
+
+   //    axios.put(`/api/product/${SOMETHING NEEDS TO GO HERE}`, {imgurl, name, price} ).then(res => {
+   //       this.setState({
+   //          imgurl: "",
+   //          name: "",
+   //          price: 0
+   //       })
+   //    })
+   // }
+
+
+
+
 
    render() {
 

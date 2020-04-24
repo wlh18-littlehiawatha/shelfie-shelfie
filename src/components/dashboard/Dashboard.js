@@ -1,5 +1,6 @@
 import React from 'react';
 import Product from '../product/Product';
+import './Dashboard.css';
 
 function Dashboard() {
   return (
